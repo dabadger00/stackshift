@@ -5,7 +5,7 @@ import { utils } from "ethers"
 
 const useMintNFT = (address: string) => {
     const { config } = usePrepareContractWrite({
-        address: '0x564C8691e24dcCAD4f3cDA580b09526D14C69527',
+        address: '0x39b4D8dDD5b2611a4e668CB692B2212F03d5114f',
         abi: GreenNFTArtifact['abi'],
         functionName: 'safeMint',
         args: [address]
@@ -20,9 +20,9 @@ const useMintNFT = (address: string) => {
 
 const MintForm = (): JSX.Element => {
 
-    const [address, setAddress] = useState<string>("0x0000000000000000000000000000000000000000")
+    const [address, setAddress] = useState<string>("")
 
-    const [mintNFT, isSuccess, isError] = useMintNFT(address)
+    const [mintNFT, isSuccess, isError] = useMintNFT("0x39b4D8dDD5b2611a4e668CB692B2212F03d5114f")
 
     const [errorMessage, setErrorMessage] = useState("")
 

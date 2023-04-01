@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import type { AppProps } from "next/app";
-import dotenv from 'dotenv'
 import {
   connectorsForWallets,
   RainbowKitProvider
@@ -21,8 +20,6 @@ import { Valora, CeloWallet, CeloDance } from "@celo/rainbowkit-celo/wallets";
 import { Alfajores, Celo } from "@celo/rainbowkit-celo/chains";
 
 import Layout from "../components/Layout";
-
-dotenv.config()
 
 const { chains, provider } = configureChains(
   [Alfajores, Celo],

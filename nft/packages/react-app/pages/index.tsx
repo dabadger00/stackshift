@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react"
-import NFTCard from "./../components/Card"
+import Cards from "./../components/Cards"
 
 import { useAccount } from 'wagmi'
 import MintForm from "@/components/MintForm"
+
 
 
 export default function Home(): JSX.Element {
@@ -24,13 +25,7 @@ export default function Home(): JSX.Element {
     return (
       <div>
         <MintForm />
-        <div className="container mx-auto px-4 py-12">
-          <div className="flex flex-wrap -mx-4">
-            <NFTCard price="1" title="lorem ipsum dolor" description="lorem ipsum dolor" imageURL="https://via.placeholder.com/250x250" />
-            < NFTCard price="1" title="lorem ipsum dolor" description="lorem ipsum dolor" imageURL="https://via.placeholder.com/250x250" />
-            <NFTCard price="1" title="lorem ipsum dolor" description="lorem ipsum dolor" imageURL="https://via.placeholder.com/250x250" />
-          </div >
-        </div >
+        <Cards />
       </div>)
 
   return (<div className="min-h-screen flex items-center justify-center">

@@ -1,8 +1,10 @@
+import truncateAddress from 'truncate-eth-address'
+
 type Props = {
     imageURL: string,
     price: string,
     title: string,
-    description: string
+    owner: string
 }
 
 
@@ -14,7 +16,7 @@ const NFTCard = (props: Props): JSX.Element => {
                 <h2 className="text-xl font-semibold mb-2">
                     {props.title}
                 </h2>
-                <p className="text-gray-700 mb-4">{props.description}</p>
+                <p className="text-gray-700 mb-4">{truncateAddress(props.owner)}</p>
                 <div className="flex items-center justify-between">
                     <span className="font-semibold">Price: {props.price} CELO</span>
                     <button className="bg-prosperity text-dark px-4 py-2 rounded-lg">Buy Now</button>
